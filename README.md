@@ -38,7 +38,4 @@ Este proyecto es una API RESTful construida con **Node.js**, **Express.js**, **J
 - jsonwebtoken  
 - nodemon (para desarrollo / for development)
 
----
-
-## 📁 Estructura del proyecto / Project structure
 
