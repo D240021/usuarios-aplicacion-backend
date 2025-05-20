@@ -3,9 +3,12 @@ const app = express();
 const usersRoutes = require('./users');
 const mongoose = require('mongoose');
 
-app.use(express.json()); // para recibir JSON en las peticiones
-app.use('/api', usersRoutes); // todas las rutas empiezan con /api
-app.listen(3000, () => {
+app.use(express.json()); 
+app.use('/api', usersRoutes); 
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
   console.log('Servidor corriendo en http://localhost:3000');
 });
 

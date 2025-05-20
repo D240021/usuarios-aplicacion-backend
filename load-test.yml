@@ -1,0 +1,19 @@
+config:
+  target: "http://localhost:3000"
+  phases:
+    - duration: 60
+      arrivalRate: 10
+  processor: "./generateUsers.js"
+
+scenarios:
+  - name: Registro y login
+    flow:
+      - function: "generateUsers"
+      - post:
+          url: "/api/register"
+          json:
+            email: "{{ email }}"
+            password: "{{ password }}"
+
+plugins:
+  faker: {}
